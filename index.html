@@ -1,0 +1,23 @@
+<button id="button">Hit me</button>
+
+<script>
+  // Button clicking
+  let count = 0;
+
+  function onClick() {
+    count = count + 1;
+    console.log(`clicked ${count} times`);
+  }
+
+  const button = document.querySelector('#button');
+  button.addEventListener('click', onClick);
+
+
+  // Clock
+  function displayTime() {
+    const now = new Date();
+    console.log(now.toISOString());
+  }
+
+  setInterval(displayTime, 5000);
+</script>
